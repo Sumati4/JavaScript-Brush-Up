@@ -127,9 +127,9 @@ In JavaScript, there are three ways to create variables: `var`, `let`, and `cons
 
 - **`let`**
 
-- **Scope**: The variable is available only within the block (like inside `{ }`) where it is declared.
-- **Hoisting**: The declaration is moved to the top, but the variable is not accessible before its declaration in the code.
-- **Reassignment**: You can change the value of a `let` variable anytime.
+   - **Scope**: The variable is available only within the block (like inside `{ }`) where it is declared.
+   - **Hoisting**: The declaration is moved to the top, but the variable is not accessible before its declaration in the code.
+   - **Reassignment**: You can change the value of a `let` variable anytime.
 
 ```javascript
 let age = 30;
@@ -137,17 +137,17 @@ age = 31; // This is allowed
 ```
 - **`const`**
 
-- **Scope**: The variable is available only within the block where it is declared.
-- **Hoisting**: The declaration is moved to the top, but the variable is not accessible before its declaration.
-- **Reassignment**: You cannot change the value of a `const` variable once it is set.
+    - **Scope**: The variable is available only within the block where it is declared.
+    - **Hoisting**: The declaration is moved to the top, but the variable is not accessible before its declaration.
+    - **Reassignment**: You cannot change the value of a `const` variable once it is set.
 
 ```javascript
 const pi = 3.14;
 // pi = 3.1415; // This will cause an error
 ```
 ### Summary
-Use var for older code or function-scoped variables.
-Use let for variables that you will change, and that are limited to a block scope.
-Use const for variables that should not change once set.
+- Use var for older code or function-scoped variables.
+- Use let for variables that you will change, and that are limited to a block scope.
+- Use const for variables that should not change once set.
 This document serves as a simple explanation of JavaScript .
 
