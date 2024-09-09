@@ -33,6 +33,40 @@ A **JavaScript engine** is a program that executes JavaScript code. Every browse
 In summary, the **JS Engine** is responsible for reading, optimizing, and executing JavaScript code efficiently.
 
 ---
+# Client-Side vs. Server-Side
+
+### What is Client-Side?
+
+**Client-side** refers to everything that happens on the user's device (like their browser) when they visit a website. This includes:
+
+- **HTML, CSS, and JavaScript**: These are the core technologies that the browser uses to display web pages and make them interactive.
+- **User Interactions**: Anything you do on a website, like clicking buttons, filling out forms, or scrolling through content, happens on the client-side.
+
+
+**Client-side** is all about how the website looks and behaves for the user. It happens on the user's machine, and changes made on the client-side do not need to communicate with the server.
+
+### What is Server-Side?
+
+**Server-side** refers to everything that happens on a web server behind the scenes. When you visit a website, your browser sends a request to the server, and the server sends back the necessary files (like HTML, images, or data). The server-side is responsible for:
+
+- **Handling Requests**: When you submit a form or make a purchase, the data is sent to the server for processing.
+- **Database Operations**: Storing and retrieving information like user accounts, products, or blog posts.
+- **Security**: Authenticating users, encrypting sensitive data, and managing secure transactions.
+- **Generating Web Pages**: The server can dynamically create web pages based on the data it has, such as user profiles or search results.
+
+The **server-side** works behind the scenes, away from the user. It handles data processing, business logic, and interactions with databases or APIs.
+
+---
+
+### Key Differences:
+
+- **Client-side** happens on the user's browser (the "front end").
+- **Server-side** happens on the server (the "back end").
+
+In simple terms:
+- **Client-side** = What you see and interact with on a website.
+- **Server-side** = What makes the website work behind the scenes.
+![](./images/server_side.png)
 
 This document serves as a simple explanation of JavaScript .
 
