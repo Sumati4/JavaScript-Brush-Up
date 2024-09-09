@@ -68,5 +68,44 @@ In simple terms:
 - **Server-side** = What makes the website work behind the scenes.
 ![](https://github.com/Sumati4/JavaScript-Brush-Up/blob/main/client%20side%20and%20server%20side.png)
 
+## What is REPL?
+
+**REPL** stands for **Read-Eval-Print Loop**. It’s an interactive environment where you can quickly test small pieces of code. Here's what happens in REPL:
+REPL is commonly used in programming languages like JavaScript, Python, Ruby, etc. For example, when you open a JavaScript console in a browser or a Python interpreter, you're working inside a REPL.
+
+- **Read**: It reads the user’s input (a line of code).
+- **Eval**: It evaluates the input and processes the result..
+- **Print**: It prints the result of the evaluation to the user.
+- **Loop**: The process repeats, allowing for more inputs.
+
+REPL is great for trying out code snippets and learning. You don’t need to write a full program—just type and see what happens!
+
+### Example in JavaScript REPL:
+
+```js
+> let num = 10;
+> num * 2;
+20
+```
+## What is the Console Window?
+
+The **console window** is a part of the REPL (Read-Eval-Print Loop) environment. It's a tool where you can write and test code, and see the results immediately. You can usually find the console window in web browsers or development tools.
+
+### How to Open the Console Window
+
+In most web browsers, you can open the console by pressing `F12` or `Ctrl + Shift + I`, then selecting the "Console" tab.
+
+### Example of Using the Console
+
+```js
+> console.log("Hello, World!");
+Hello, World!
+```
+
+### Why Use the Console Window?
+**Quick Testing:** Test your code instantly.
+**Debugging:** Find and fix errors in your code.
+**Logging**: Print messages to understand what’s happening.
+
 This document serves as a simple explanation of JavaScript .
 
