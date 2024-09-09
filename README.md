@@ -34,5 +34,5 @@ In summary, the **JS Engine** is responsible for reading, optimizing, and execut
 
 ---
 
-This document serves as a simple explanation of JavaScript and the role of JS Engines.
+This document serves as a simple explanation of JavaScript .
 
