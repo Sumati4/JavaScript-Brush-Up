@@ -103,9 +103,9 @@ Hello, World!
 ```
 
 ### Why Use the Console Window?
--**Quick Testing:** Test your code instantly.
--**Debugging:** Find and fix errors in your code.
--**Logging**: Print messages to understand what’s happening.
+- **Quick Testing:** Test your code instantly.
+- **Debugging:** Find and fix errors in your code.
+- **Logging**: Print messages to understand what’s happening.
 
 This document serves as a simple explanation of JavaScript .
 
