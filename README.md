@@ -66,7 +66,7 @@ The **server-side** works behind the scenes, away from the user. It handles data
 In simple terms:
 - **Client-side** = What you see and interact with on a website.
 - **Server-side** = What makes the website work behind the scenes.
-![](https://github.com/Sumati4/JavaScript-Brush-Up)
+![](https://github.com/Sumati4/JavaScript-Brush-Up/blob/main/client%20side%20and%20server%20side.png)
 
 This document serves as a simple explanation of JavaScript .
 
