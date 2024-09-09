@@ -2,7 +2,7 @@
 
 ### What is JavaScript?
 
-JavaScript (JS) is a popular programming language that makes websites interactive and dynamic. It is often used for things like:
+JavaScript (JS) is a popular programming language that convert static web pages to interactive and dynamic web pages. It is often used for things like:
 
 - **Changing web page content**: Updating text, images, and styles without refreshing the page.
 - **Handling user actions**: Responding to clicks, form inputs, or keyboard actions.
@@ -10,6 +10,7 @@ JavaScript (JS) is a popular programming language that makes websites interactiv
 - **Object-oriented features**: JS supports objects and inheritance for more complex programming.
 
 JavaScript runs directly in the browser (client-side), but it can also be used on the server-side using tools like **Node.js**. It's commonly used for building web applications, validating forms, and managing the behavior of the browser.
+
 
 ---
 
