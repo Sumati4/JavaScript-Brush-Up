@@ -294,12 +294,13 @@ console.log(num.toString());  // Output: "123"
 ## 20. match()
 The match() method retrieves the result of matching a string against a regular expression. It returns an array of matches, or null if no match is found.
 
-j```
+```
 let str = "The rain in Spain stays mainly in the plain";
 let result = str.match(/ain/g);
 console.log(result);  // Output: ['ain', 'ain', 'ain']
 ```
 You can also use it with capturing groups:
+
 ```
 let str = "2024-09-10";
 let datePattern = /(\d{4})-(\d{2})-(\d{2})/;
