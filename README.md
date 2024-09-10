@@ -338,8 +338,8 @@ Document
            ├── h1 ("Hello, World!")
            └── p ("This is a paragraph.")
 ```
-With the DOM, you can use JavaScript to interact with these elements, such as changing the text of the <h1> or modifying the <p> element.
-# Difference Between DOM and HTML
+
+
 
 ## HTML:
 - **What it is**: A language used to define the structure of a webpage.
