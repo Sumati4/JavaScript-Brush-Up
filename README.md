@@ -353,3 +353,100 @@ Document
 
 ---
 
+# JavaScript Selectors
+
+## What are Selectors in JavaScript?
+
+Selectors in JavaScript are used to **select** and **manipulate** HTML elements on a webpage. They help you target specific elements in the Document Object Model (DOM) so that you can read or change their content, style, or attributes using JavaScript.
+
+In simple terms:
+- Think of selectors as **tools** that let you point at specific elements on a web page.
+- Once selected, you can do things like change the text, update the style, or handle events (e.g., clicking a button).
+
+## Common JavaScript Selectors:
+
+### 1. `getElementById()`
+This selector targets an element by its **ID**. IDs are unique, so this method will only return one element.
+
+```javascript
+let element = document.getElementById('myElement');
+console.log(element);  // Outputs the element with ID 'myElement'
+```
+### 2. getElementsByClassName()
+This selector targets all elements that have a specific class. It returns a collection (array-like) of elements.
+
+```
+let elements = document.getElementsByClassName('myClass');
+console.log(elements);  // Outputs a collection of all elements with the class 'myClass'
+```
+### 3. getElementsByTagName()
+This selector targets all elements by their tag name (e.g., <div>, <p>, <h1>). It returns a collection of elements.
+```
+let elements = document.getElementsByTagName('p');
+console.log(elements);  // Outputs all <p> (paragraph) elements
+```
+### 4. querySelector()
+This selector targets the first element that matches a specific CSS selector. It can be an ID, class, tag, or any valid CSS selector.
+```
+let element = document.querySelector('.myClass');
+console.log(element);  // Outputs the first element with class 'myClass'
+```
+### 5. querySelectorAll()
+This selector targets all elements that match a specific CSS selector and returns a collection.
+```
+let elements = document.querySelectorAll('p');
+console.log(elements);  // Outputs a collection of all <p> elements
+```
+Examples:
+Selecting by ID:
+```
+<h1 id="title">Hello World</h1>
+
+<script>
+  let title = document.getElementById('title');
+  title.textContent = 'Hello, JavaScript!';
+</script>
+```
+Selecting by Class:
+```
+<p class="description">This is paragraph 1.</p>
+<p class="description">This is paragraph 2.</p>
+
+<script>
+  let paragraphs = document.getElementsByClassName('description');
+  console.log(paragraphs);  // Outputs all paragraphs with class 'description'
+</script>
+```
+Selecting by Tag:
+```
+<div>Div 1</div>
+<div>Div 2</div>
+
+<script>
+  let divs = document.getElementsByTagName('div');
+  console.log(divs);  // Outputs all <div> elements
+</script>
+```
+Using querySelector():
+```
+<p class="info">Info 1</p>
+<p class="info">Info 2</p>
+
+<script>
+  let firstInfo = document.querySelector('.info');
+  console.log(firstInfo);  // Outputs the first element with class 'info'
+</script>
+```
+Using querySelectorAll():
+```
+<p class="info">Info 1</p>
+<p class="info">Info 2</p>
+
+<script>
+  let allInfo = document.querySelectorAll('.info');
+  console.log(allInfo);  // Outputs all elements with class 'info'
+</script>
+```
+Key Takeaway:
+Selectors allow you to target HTML elements for manipulation.
+There are different types of selectors to target elements by ID, class, tag, or using CSS selectors.
