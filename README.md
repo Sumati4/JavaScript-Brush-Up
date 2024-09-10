@@ -248,5 +248,62 @@ The repeat() method repeats a string a specified number of times.
 let str = "Hello ";
 console.log(str.repeat(3));  // Output: Hello Hello Hello
 ```
+## 14. `substr()`
+The `substr()` method extracts a part of a string, starting at a specified index and extending for a given number of characters. Unlike `substring()`, you specify the start index and the length of the substring.
 
+```javascript
+let str = "Hello, World!";
+console.log(str.substr(7, 5));  // Output: World
+```
+Note: substr() is considered a legacy function, and it is recommended to use slice() or substring() instead for modern code.
+## 15. search()
+The search() method searches a string for a specified value or regular expression and returns the position of the match. If no match is found, it returns -1.
+```
+let str = "Hello, World!";
+console.log(str.search("World"));  // Output: 7
+console.log(str.search("JavaScript"));  // Output: -1
+```
+## 16. `lastIndexOf()`
+The `lastIndexOf()` method returns the index of the last occurrence of a specified value in a string. It searches from the end of the string towards the beginning. If the value is not found, it returns `-1`.
 
+```javascript
+let str = "Hello, World, Hello!";
+console.log(str.lastIndexOf("Hello"));  // Output: 13
+console.log(str.lastIndexOf("World"));  // Output: 7
+```
+## 17. charCodeAt()
+The charCodeAt() method returns the Unicode of the character at a specified index in a string. The returned value is an integer representing the UTF-16 code unit.
+```
+let str = "Hello";
+console.log(str.charCodeAt(0));  // Output: 72 (Unicode for 'H')
+```
+## 18. valueOf()
+The valueOf() method returns the primitive value of a String object. In most cases, this method is called automatically when string operations are applied, so it's rarely used explicitly.
+
+```
+let str = new String("Hello");
+console.log(str.valueOf());  // Output: Hello
+```
+## 19. toString()
+The toString() method returns a string representing the specified object. It's similar to valueOf(), but can be explicitly called on various data types (e.g., numbers, arrays) to return their string representation.
+
+```
+let num = 123;
+console.log(num.toString());  // Output: "123"
+```
+## 20. match()
+The match() method retrieves the result of matching a string against a regular expression. It returns an array of matches, or null if no match is found.
+
+j```
+let str = "The rain in Spain stays mainly in the plain";
+let result = str.match(/ain/g);
+console.log(result);  // Output: ['ain', 'ain', 'ain']
+```
+You can also use it with capturing groups:
+```
+let str = "2024-09-10";
+let datePattern = /(\d{4})-(\d{2})-(\d{2})/;
+let result = str.match(datePattern);
+console.log(result);  
+// Output: ['2024-09-10', '2024', '09', '10']
+```
