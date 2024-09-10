@@ -380,10 +380,10 @@ let elements = document.getElementsByClassName('myClass');
 console.log(elements);  // Outputs a collection of all elements with the class 'myClass'
 ```
 ### 3. getElementsByTagName()
-This selector targets all elements by their tag name (e.g., <div>, <p>, <h1>). It returns a collection of elements.
+This selector targets all elements by their tag name (e.g., div, p, h1). It returns a collection of elements.
 ```
 let elements = document.getElementsByTagName('p');
-console.log(elements);  // Outputs all <p> (paragraph) elements
+console.log(elements);  // Outputs all  (paragraph) elements
 ```
 ### 4. querySelector()
 This selector targets the first element that matches a specific CSS selector. It can be an ID, class, tag, or any valid CSS selector.
