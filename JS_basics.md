@@ -450,3 +450,89 @@ Using querySelectorAll():
 Key Takeaway:
 Selectors allow you to target HTML elements for manipulation.
 There are different types of selectors to target elements by ID, class, tag, or using CSS selectors.
+
+# Scope in JavaScript
+Scope in JavaScript refers to the accessibility of variables, functions, and objects in different parts of the code. It determines where variables and functions can be used in your code.
+
+There are two main types of scope:
+
+### 1. Global Scope
+When a variable is declared outside of any function or block, it is in the global scope.
+Variables in the global scope can be accessed from anywhere in the code.
+Example:
+```
+let name = "Alice";  // Global variable
+
+function greet() {
+  console.log(name);  // Can access global variable 'name'
+}
+
+greet();  // Output: Alice
+console.log(name);  // Output: Alice
+```
+### 2. Local Scope
+Variables declared inside a function or block ({}) are in the local scope.
+They can only be accessed within that function or block and are not available outside of it.
+Example:
+```
+function sayHello() {
+  let message = "Hello, world!";  // Local variable
+  console.log(message);  // Can access 'message' inside the function
+}
+sayHello();  // Output: Hello, world!
+// console.log(message);  // Error: message is not defined (cannot access outside)
+```
+### 3. Block Scope (with let and const)
+Variables declared with let and const inside a block {} are limited to that block.
+This is different from var, which is function-scoped.
+Example:
+```
+if (true) {
+  let age = 25;  // Block-scoped variable
+  console.log(age);  // Output: 25
+}
+
+// console.log(age);  // Error: age is not defined (block scope)
+```
+### 4. Function Scope (with var)
+Variables declared with var inside a function are function-scoped, meaning they are only accessible within the function, even if they are declared inside blocks within the function.
+Example:
+```
+function showNumber() {
+  if (true) {
+    var number = 10;  // Function-scoped variable
+  }
+  console.log(number);  // Output: 10
+}
+showNumber();
+// console.log(number);  // Error: number is not defined (outside function)
+```
+### Summary
+**Global Scope:** Variables are accessible everywhere in the code.
+**Local Scope:** Variables are only accessible within the function or block where they are defined.
+**Block Scope:** Variables declared with let and const are confined to the block.
+**Function Scope:** Variables declared with var are confined to the function.
+
+# Hoisting in JavaScript
+Hoisting is a JavaScript behavior where variables and function declarations are moved to the top of their scope before the code is executed.
+
+For variables, only the declaration is hoisted, not the value.
+```
+console.log(x);  // Output: undefined
+var x = 5;  // Declaration is hoisted, but value is not
+```
+It's like the above code is understood as:
+
+```
+var x;  // Hoisted declaration
+console.log(x);  // undefined
+x = 5;  // Assigned value
+```
+//For functions, both the declaration and body are hoisted.
+```
+greet();  // Output: Hello!
+function greet() {
+  console.log("Hello!");
+}
+```
+The entire function is hoisted, so you can call it before defining it.
