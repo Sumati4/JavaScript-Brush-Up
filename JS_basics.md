@@ -536,3 +536,20 @@ function greet() {
 }
 ```
 The entire function is hoisted, so you can call it before defining it.
+
+# What is JSON?
+
+**JSON (JavaScript Object Notation)** is a format used for storing and transporting data. It is easy for humans to read and write, and it's easy for machines to parse and generate.
+
+### Data format:
+JSON is written in **key-value pairs**.
+
+```json
+{
+  "name": "John",
+  "age": 30,
+  "isStudent": false
+}
+```
+### Used in APIs:
+JSON is commonly used to send data between a server and a web application.
