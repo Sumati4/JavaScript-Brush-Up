@@ -41,3 +41,52 @@ const pi = 3.14;
 - Use let for variables that you will change, and that are limited to a block scope.
 - Use const for variables that should not change once set.
 This document serves as a simple explanation of JavaScript .
+
+# Data Types in JavaScript
+
+In JavaScript, **data types** refer to the different types of values that variables can hold. There are two main categories: **Primitive** and **Non-Primitive** data types.
+
+## Primitive Data Types:
+These are basic data types that represent single values. There are 7 primitive data types in JavaScript:
+
+1. **Number**: Represents numbers, including integers and floating-point values (decimals).
+   ```
+   let age = 25;
+   let pi = 3.14;
+   ```
+2. **String:** Represents a sequence of characters (text), enclosed in quotes (single ', double ", or backticks `).
+```
+let name = "Sumati";
+```
+3.**Boolean:**  Represents logical values, either true or false.
+```
+let isStudent = true;
+```
+4.**Null:** Represents an empty or non-existent value. It is manually assigned.
+```
+let result = null;
+```
+5.**Undefined:** A variable that is declared but not assigned any value is undefined by default.
+```
+let car;
+```
+6.**Symbol:** Represents a unique identifier, useful for object properties.
+```
+let sym = Symbol("unique");
+```
+7.**BigInt:** Used for working with very large integers, beyond the safe range for Number.
+```
+let bigNum = 123456789012345678901234567890n;
+```
+## Non-Primitive Data Types:
+Non-primitive data types are more complex and can store multiple values. The main non-primitive type in JavaScript is Object.
+
+1.**Object:** Can hold multiple values as key-value pairs. It can also represent arrays and functions.
+```
+let person = { name: "Sumati", age: 25 };
+```
+2.**Array:** A type of object that holds a list of values.
+
+```
+let numbers = [1, 2, 3, 4];
+```
