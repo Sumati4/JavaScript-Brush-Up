@@ -246,7 +246,7 @@ switch (day) {
 }
 ```
 ### Summary
-if Statement: Executes code if a condition is true.
-if-else Statement: Executes one block of code if a condition is true, and another block if it's false.
-if-else if-else Statement: Checks multiple conditions and executes the corresponding code block.
-switch Statement: Selects and executes one block of code from multiple options based on the value of an expression.
+-if Statement: Executes code if a condition is true.
+-if-else Statement: Executes one block of code if a condition is true, and another block if it's false.
+-if-else if-else Statement: Checks multiple conditions and executes the corresponding code block.
+-switch Statement: Selects and executes one block of code from multiple options based on the value of an expression.
