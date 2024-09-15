@@ -246,7 +246,43 @@ switch (day) {
 }
 ```
 ### Summary
--if Statement: Executes code if a condition is true.
--if-else Statement: Executes one block of code if a condition is true, and another block if it's false.
--if-else if-else Statement: Checks multiple conditions and executes the corresponding code block.
--switch Statement: Selects and executes one block of code from multiple options based on the value of an expression.
+
+- **`if` Statement**: Executes code if a condition is true.
+- **`if-else` Statement**: Executes one block of code if a condition is true, and another block if it's false.
+- **`if-else if-else` Statement**: Checks multiple conditions and executes the corresponding code block.
+- **`switch` Statement**: Selects and executes one block of code from multiple options based on the value of an expression.
+# Double Equals (`==`) vs Triple Equals (`===`) in JavaScript
+
+In JavaScript, there are two types of equality operators that you can use to compare values: `==` (double equals) and `===` (triple equals). They work differently when checking for equality.
+
+### Double Equals (`==`)
+
+The **double equals (`==`)** operator checks for **equality** of values, but it **does not** consider the **data type**. It performs type coercion, which means it converts the values to the same type before comparing them.
+
+**Example:**
+```js
+let num = 5;
+let str = '5';
+
+console.log(num == str); // Output: true
+```
+Here, num is a number and str is a string, but == converts the string '5' to the number 5 before comparing, so the result is true.
+### Triple Equals (`===`)
+
+The **triple equals (`===`)** operator checks for both **value** and **data type**. It does not perform type coercion, so both the value and the type must be the same for the comparison to return `true`.
+
+**Example:**
+```js
+let num = 5;
+let str = '5';
+
+console.log(num === str); // Output: false
+```
+Here, num is a number and str is a string. Since === checks both the value and the type, and they are different types, the result is false.
+### Summary
+
+- **Double Equals (`==`)**: Compares values for equality **after** converting them to the same type. (Type coercion)
+- **Triple Equals (`===`)**: Compares values for equality **without** converting them. Both value and type must be the same.
+
+Use `===` when you want to ensure that both the value and the type are exactly the same, and `==` if you want to allow for type coercion.
+
