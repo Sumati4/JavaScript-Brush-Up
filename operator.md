@@ -48,3 +48,57 @@ You can use parentheses `()` to change the order of evaluation:
 ```js
 let result = (3 + 4) * 2;
 console.log(result); // Output: 14
+```
+# Unary vs Binary vs Ternary Operators in JavaScript
+
+### 1. Unary Operators
+
+A **unary operator** works with **a single operand** (one value).
+
+- **Example**: `++`, `--`, `typeof`, etc.
+  
+  ```
+  let x = 5;
+  x++; // Unary operator '++' increments the value of x by 1
+  console.log(x); // Output: 6
+
+  console.log(typeof x); // Output: 'number' (typeof is a unary operator that checks the type of the variable)
+
+```
+
+### 2. Binary Operators
+
+A binary operator works with **two operands** (two values).
+
+- **Example**: `+`, `-`, `*`, `/`, `>`, `<`, `&&`, `||`, etc.
+
+```
+let a = 10;
+let b = 5;
+let sum = a + b; // '+' is a binary operator that adds two values
+console.log(sum); // Output: 15
+```
+Here, a and b are the two operands, and + is the binary operator.
+
+### 3. Ternary Operator
+
+A ternary operator works with **three operands** and is often used as a shortcut for an `if-else` statement. It's also called a **conditional operator**.
+
+- **Syntax**: `condition ? expression1 : expression2`
+
+```js
+let age = 18;
+let canVote = (age >= 18) ? 'Yes' : 'No'; // Ternary operator checks the condition
+console.log(canVote); // Output: 'Yes'
+```
+
+Here, the condition `(age >= 18)` is checked:
+
+- If **true**, the result is `'Yes'`.
+- If **false**, the result is `'No'`.
+
+### Summary
+
+- **Unary Operator**: Works with **one operand** (e.g., `++`, `--`, `typeof`).
+- **Binary Operator**: Works with **two operands** (e.g., `+`, `-`, `*`, `&&`, `||`).
+- **Ternary Operator**: Works with **three operands** and is used for conditional expressions (e.g., `condition ? true : false`).
