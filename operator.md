@@ -145,3 +145,108 @@ In this case, x is 0 (which is falsy), so the || operator checks y, which is 5, 
 ### Summary
 **&& (AND):** Stops at the first false value.
 **|| (OR):** Stops at the first true value.
+
+# Conditional Statement Types in JavaScript
+
+Conditional statements are used to make decisions in JavaScript code. They allow you to execute different code blocks based on certain conditions. Here are the main types of conditional statements:
+
+### 1. `if` Statement
+
+The `if` statement allows you to execute a block of code if a specified condition is true.
+
+**Syntax:**
+```
+if (condition) {
+    // Code to execute if the condition is true
+}
+```
+Example:
+```
+let age = 20;
+if (age >= 18) {
+    console.log('You are an adult.');
+}
+```
+### 2. if-else Statement
+The if-else statement provides an alternative block of code to execute if the condition is false.
+
+Syntax:
+```
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+```
+Example:
+```
+let age = 16;
+if (age >= 18) {
+    console.log('You are an adult.');
+} else {
+    console.log('You are a minor.');
+}
+```
+### 3. if-else if-else Statement
+The if-else if-else statement allows you to check multiple conditions.
+
+Syntax:
+```
+if (condition1) {
+    // Code to execute if condition1 is true
+} else if (condition2) {
+    // Code to execute if condition2 is true
+} else {
+    // Code to execute if none of the above conditions are true
+}
+```
+Example:
+```
+let score = 85;
+if (score >= 90) {
+    console.log('Grade: A');
+} else if (score >= 80) {
+    console.log('Grade: B');
+} else {
+    console.log('Grade: C');
+}
+```
+### 4. switch Statement
+The switch statement is used to select one of many code blocks to be executed based on the value of an expression.
+
+Syntax:
+```
+switch (expression) {
+    case value1:
+        // Code to execute if expression === value1
+        break;
+    case value2:
+        // Code to execute if expression === value2
+        break;
+    default:
+        // Code to execute if no case matches
+}
+```
+Example:
+
+```
+let day = 3;
+switch (day) {
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Tuesday');
+        break;
+    case 3:
+        console.log('Wednesday');
+        break;
+    default:
+        console.log('Weekend');
+}
+```
+### Summary
+if Statement: Executes code if a condition is true.
+if-else Statement: Executes one block of code if a condition is true, and another block if it's false.
+if-else if-else Statement: Checks multiple conditions and executes the corresponding code block.
+switch Statement: Selects and executes one block of code from multiple options based on the value of an expression.
