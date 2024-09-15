@@ -1,6 +1,6 @@
  Operator Precedence in JavaScript
 
-### What is Operator Precedence?
+# What is Operator Precedence?
 
 Operator precedence determines the order in which operations are performed in an expression with multiple operators. JavaScript follows specific rules to decide which operations to execute first.
 
@@ -102,3 +102,46 @@ Here, the condition `(age >= 18)` is checked:
 - **Unary Operator**: Works with **one operand** (e.g., `++`, `--`, `typeof`).
 - **Binary Operator**: Works with **two operands** (e.g., `+`, `-`, `*`, `&&`, `||`).
 - **Ternary Operator**: Works with **three operands** and is used for conditional expressions (e.g., `condition ? true : false`).
+# Short-Circuit Evaluation in JavaScript
+
+# What is Short-Circuit Evaluation?
+
+**Short-circuit evaluation** is a concept in JavaScript where logical operators (`&&` and `||`) stop evaluating as soon as the result is known.
+
+- **`&&` (AND operator)**: If the first value is **false**, it will **not** check the second value because the entire expression will be false.
+- **`||` (OR operator)**: If the first value is **true**, it will **not** check the second value because the entire expression will be true.
+
+### How it Works
+
+### AND (`&&`) Operator
+
+In an `&&` operation, if the first value is **false**, the expression stops and returns **false** immediately.
+
+```
+let result = false && true; 
+console.log(result); // Output: false
+```
+Here, the first value is false, so JavaScript does not check the second value.
+
+#### OR (||) Operator
+In an || operation, if the first value is true, the expression stops and returns true immediately.
+
+```
+let result = true || false; 
+console.log(result); // Output: true
+```
+Here, the first value is true, so JavaScript does not check the second value.
+
+Example
+```
+let x = 0;
+let y = 5;
+
+let result = x || y; 
+console.log(result); // Output: 5
+```
+In this case, x is 0 (which is falsy), so the || operator checks y, which is 5, and returns it.
+
+### Summary
+**&& (AND):** Stops at the first false value.
+**|| (OR):** Stops at the first true value.
