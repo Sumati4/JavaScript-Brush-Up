@@ -112,3 +112,71 @@ fruits.forEach(fruit => console.log(fruit));
 - **Slice**: `slice()`
 - **Join arrays**: `concat()`
 
+# Array Destructuring in JavaScript
+## What is Array Destructuring?
+Array Destructuring is a convenient way to unpack values from arrays and assign them to variables. Instead of accessing each value manually using indices, you can extract multiple values in a single line of code.
+
+**example**
+```
+let fruits = ['Apple', 'Banana', 'Mango'];
+
+// Old way (without destructuring):
+let firstFruit = fruits[0];
+let secondFruit = fruits[1];
+
+// New way (with destructuring):
+let [firstFruit, secondFruit] = fruits;
+
+console.log(firstFruit);  // Output: Apple
+console.log(secondFruit); // Output: Banana
+```
+How Does It Work?
+When you destructure an array, the values at each index are assigned to variables in the order they appear.
+
+```
+let [a, b, c] = [1, 2, 3];
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+```
+Skipping Values
+You can also skip values when destructuring by leaving empty spaces:
+```
+let [first, , third] = ['Red', 'Green', 'Blue'];
+console.log(first);  // Output: Red
+console.log(third);  // Output: Blue
+```
+Default Values
+If the array has fewer values than the variables you're destructuring, you can set default values.
+
+```
+let [a = 1, b = 2, c = 3] = [10];
+console.log(a); // 10 (from the array)
+console.log(b); // 2  (default value)
+console.log(c); // 3  (default value)
+```
+## Destructuring with Rest Operator (...)
+You can also use the rest operator (...) to collect the remaining values into an array.
+
+```
+let [first, ...rest] = [10, 20, 30, 40];
+console.log(first); // Output: 10
+console.log(rest);  // Output: [20, 30, 40]
+```
+**Practical Example**: Swapping Variables
+Array destructuring makes it easy to swap two variables without a temporary variable.
+
+```
+let a = 5, b = 10;
+
+// Swap values
+[a, b] = [b, a];
+
+console.log(a); // Output: 10
+console.log(b); // Output: 5
+```
+## Summary:
+- **Array Destructuring** allows you to unpack array values into variables.
+- You can **skip values**, assign **default values**, and use the **rest operator** to collect the rest of the array.
+- It’s a clean and simple way to handle arrays in JavaScript!
+
