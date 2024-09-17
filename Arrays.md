@@ -180,3 +180,62 @@ console.log(b); // Output: 5
 - You can **skip values**, assign **default values**, and use the **rest operator** to collect the rest of the array.
 - It’s a clean and simple way to handle arrays in JavaScript!
 
+# Array-like Objects in JavaScript
+
+## What is an Array-like Object?
+
+An **Array-like object** is any object in JavaScript that looks like an array (it has indexed properties and a `length` property) but does **not have array methods** like `push()`, `pop()`, or `forEach()`.
+
+### Examples of array-like objects:
+- `arguments` object in functions.
+- `NodeList` (returned by methods like `document.querySelectorAll`).
+
+### Example:
+
+```
+function exampleFunc() {
+    console.log(arguments);  // This is an array-like object
+}
+
+exampleFunc('apple', 'banana', 'mango');
+```
+# How to Convert an Array-like Object into an Array?
+You can easily convert an array-like object into a real array using several methods:
+
+## 1. Using Array.from()
+```
+function exampleFunc() {
+    let argsArray = Array.from(arguments);
+    console.log(argsArray);  // Now it's a real array
+}
+
+exampleFunc('apple', 'banana', 'mango');
+// Output: ['apple', 'banana', 'mango']
+```
+## 2. Using Array.prototype.slice.call()
+```
+function exampleFunc() {
+    let argsArray = Array.prototype.slice.call(arguments);
+    console.log(argsArray);  // Now it's a real array
+}
+
+exampleFunc('apple', 'banana', 'mango');
+// Output: ['apple', 'banana', 'mango']
+```
+## 3. Using Spread Operator (...)
+```
+function exampleFunc() {
+    let argsArray = [...arguments];
+    console.log(argsArray);  // Now it's a real array
+}
+
+exampleFunc('apple', 'banana', 'mango');
+// Output: ['apple', 'banana', 'mango']
+```
+## Summary:
+- **Array-like objects** look like arrays but don’t have array methods.
+- Common examples include the `arguments` object and `NodeList`.
+- To convert an array-like object into a real array, use:
+  - `Array.from()`
+  - `Array.prototype.slice.call()`
+  - Spread operator (`...`)
