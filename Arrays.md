@@ -101,12 +101,14 @@ for (let i = 0; i < fruits.length; i++) {
 ```
 fruits.forEach(fruit => console.log(fruit));
 ```
-### Summary of Common Methods:
-**Insert:** push(), unshift()
-**Remove:** pop(), shift(), splice()
-**Access:** [] (index)
-**Modify:** [] (index)
-**Sort:** sort()
-**Reverse:** reverse()
-**Slice:** slice()
-**Join arrays:** concat()
+## Summary of Common Methods:
+
+- **Insert**: `push()`, `unshift()`
+- **Remove**: `pop()`, `shift()`, `splice()`
+- **Access**: `[]` (index)
+- **Modify**: `[]` (index)
+- **Sort**: `sort()`
+- **Reverse**: `reverse()`
+- **Slice**: `slice()`
+- **Join arrays**: `concat()`
+
