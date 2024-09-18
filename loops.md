@@ -104,3 +104,47 @@ for (let key in car) {
   console.log(key + ": " + car[key]);  // Prints each key-value pair in the object
 }
 ```
+# Difference Between `for` and `for...of` Loops in JavaScript
+
+## `for` Loop:
+
+- The `for` loop is used to repeat a block of code a specific number of times.
+- It works with any kind of data (numbers, arrays, objects), but you need to manually manage the loop counter (index).
+  
+### Example:
+```javascript
+let fruits = ['apple', 'banana', 'mango'];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);  // Prints each fruit in the array
+}
+
+```
+## `for...of` Loop:
+
+The `for...of` loop is specifically used to iterate over the **values** of iterable objects like arrays, strings, or sets. 
+
+It is simpler because you don't have to manage an index or counter; it directly gives you the values.
+
+### Example:
+
+```javascript
+let fruits = ['apple', 'banana', 'mango'];
+
+for (let fruit of fruits) {
+  console.log(fruit);  // Prints each fruit in the array
+}
+```
+## Comparison Table
+
+| **Feature**         | **for Loop**                                                | **for...of Loop**                                |
+|---------------------|---------------------------------------------------          |--------------------------------------------------|
+| **Purpose**         | Used for general iteration over any data.                   | Specifically used to loop over values of iterables. |
+| **Usage**           | Requires manually managing the loop counter.                | Automatically gives you the values of the iterable. |
+| **Best For**        | When you need control over the index (e.g., accessing index)| When you want to loop over items in an array or iterable. |
+| **Iterates Over**   | Can iterate over anything by index (e.g., arrays, numbers). | Iterates over the values of iterable objects (arrays, strings, sets). |
+| **Example Output**  | Outputs array elements using `fruits[i]`.                   | Outputs array elements directly using `fruit`.    |
+## Summary:
+- Use a `for` loop when you need more control (like accessing the index of each element).
+- Use a `for...of` loop for simplicity when you just need the values from an array or iterable.
+
