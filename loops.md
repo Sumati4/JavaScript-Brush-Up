@@ -191,3 +191,39 @@ for (let key in car) {
 
 - Use a `for...of` loop to get the **values** from an array, string, or iterable.
 - Use a `for...in` loop to get the **keys** or **indexes** from objects or arrays.
+  # `forEach` Loop in JavaScript
+
+## What is the `forEach` Loop?
+
+The `forEach` loop is an array method that executes a provided function once for each element in an array. It is used to perform operations on each element of the array, such as logging values or modifying them.
+
+### Example:
+
+```javascript
+let fruits = ['apple', 'banana', 'mango'];
+
+fruits.forEach(function(fruit) {
+  console.log(fruit);  // Prints each fruit in the array
+});
+```
+
+# Comparison of Loop Methods in JavaScript
+
+## Comparison Table:
+
+| **Feature**         | **for Loop**                                      | **for...of Loop**                                  | **for...in Loop**                                  | **forEach Loop**                                 |
+|---------------------|---------------------------------------------------|---------------------------------------------------|----------------------------------------------------|--------------------------------------------------|
+| **Purpose**         | Used for general iteration over any data.         | Specifically used to loop over values of iterables. | Used to loop over keys/properties of an object (or indexes of arrays). | Used to execute a function for each element in an array. |
+| **Usage**           | Requires manually managing the loop counter.      | Automatically gives you the values of the iterable. | Requires manually managing the keys or indexes.    | Directly applies a function to each element in the array. |
+| **Best For**        | When you need control over the index (e.g., accessing index). | When you want to loop over items in an array or iterable. | When you need to access the keys or properties of an object. | When you need to perform an operation on each element of an array. |
+| **Iterates Over**   | Can iterate over anything by index (e.g., arrays, numbers). | Values of arrays, strings, or any iterable.        | Keys or property names of objects or indexes of arrays. | Values of an array. |
+| **Example Output**  | Outputs array elements using `fruits[i]`.         | Outputs array elements directly using `fruit`.     | Prints each key and value of an object or index and value of an array. | Executes a function on each element, such as logging it. |
+
+## Summary:
+
+- Use a `for` loop when you need more control (like accessing the index of each element).
+- Use a `for...of` loop for simplicity when you just need the values from an array or iterable.
+- Use a `for...in` loop to get the keys or indexes from objects or arrays.
+- Use `forEach` when you need to perform an operation on each element of an array, especially when you want to use a function.
+
+  
