@@ -151,3 +151,34 @@ document.getElementById("myButton").addEventListener("click", function() {
 ## Why Use Event Handling?
 - It makes web pages interactive.
 - You can respond to user inputs, control animations, validate forms, etc.
+
+ # First-Class Functions in JavaScript
+
+- **First-Class Functions** mean that functions in JavaScript are treated like any other variable.
+- They can be stored in variables, passed as arguments to other functions, and returned from functions.
+
+### Example:
+
+```js
+// Assign a function to a variable
+const greet = function() {
+  console.log("Hello!");
+};
+
+// Pass a function as an argument
+function callFunction(func) {
+  func(); // Calling the passed function
+}
+
+callFunction(greet); // Output: Hello!
+```
+**In this example:**
+
+- The greet function is assigned to a variable.
+- It is passed as an argument to the callFunction function, showing how functions are treated like values.
+**Key Features:**
+- Assign functions to variables.
+- Pass functions as arguments to other functions.
+- Return functions from other functions.
+## Why First-Class Functions are Useful:
+They make JavaScript flexible and powerful, allowing techniques like callbacks, higher-order functions, and functional programming. 
