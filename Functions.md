@@ -78,3 +78,33 @@ function doSomething(callback) {
   callback();
 }
 ```
+# Difference Between Arguments and Parameters in JavaScript
+
+## Parameters
+- **Parameters** are variables listed as part of the function definition.
+- They act as placeholders for the values that the function will receive when it is called.
+
+Example:
+
+```
+function add(a, b) {
+  // a and b are parameters
+  return a + b;
+}
+```
+## Arguments
+
+- **Arguments** are the actual values passed to the function when it is called.
+- These values are assigned to the parameters of the function.
+
+### Example:
+
+```
+add(5, 3);
+```
+| **Aspect**     | **Parameters**                                      | **Arguments**                                  |
+|----------------|-----------------------------------------------------|------------------------------------------------|
+| **Definition** | Variables in the function definition                | Actual values passed to the function           |
+| **Purpose**    | Act as placeholders for the values the function will receive | Provide the actual data the function will use  |
+| **Declared**   | In the function definition                          | When the function is called                    |
+| **Example**    | `function add(a, b) {}` (`a` and `b` are parameters) | `add(5, 3)` (`5` and `3` are arguments)        |
