@@ -128,3 +128,26 @@ In the example above:
 
 - If no value is passed for name, it defaults to "Guest".
 - If a value is provided, like "Sumati", that value is used instead of the default.
+
+  # Event Handling in JavaScript
+
+- **Event Handling** in JavaScript allows you to respond to user actions like clicks, key presses, or mouse movements.
+- It helps make web pages interactive by triggering specific actions when an event occurs.
+
+### Example:
+
+```js
+document.getElementById("myButton").addEventListener("click", function() {
+  alert("Button was clicked!");
+});
+```
+**In this example:**
+- An event listener is added to the button.
+- When the button is clicked, the function is triggered, showing an alert.
+Common Events:
+- **click:** When the user clicks an element.
+- **keydown:** When a key is pressed.
+- **mouseover:** When the mouse hovers over an element.
+## Why Use Event Handling?
+- It makes web pages interactive.
+- You can respond to user inputs, control animations, validate forms, etc.
