@@ -144,7 +144,7 @@ document.getElementById("myButton").addEventListener("click", function() {
 **In this example:**
 - An event listener is added to the button.
 - When the button is clicked, the function is triggered, showing an alert.
-Common Events:
+## Common Events:
 - **click:** When the user clicks an element.
 - **keydown:** When a key is pressed.
 - **mouseover:** When the mouse hovers over an element.
