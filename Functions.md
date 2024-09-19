@@ -238,7 +238,7 @@ console.log(addTwo(3)); // Output: 5
 -First, add(2) is called, returning a new function.
 -Then, addTwo(3) is called, which completes the addition (2 + 3 = 5).
 ## Why Use Currying?
--It allows you to break down a function into smaller, more manageable parts.
--It’s useful when you want to reuse a function with some preset values (partial application).
+- It allows you to break down a function into smaller, more manageable parts.
+- It’s useful when you want to reuse a function with some preset values (partial application).
 
 **Currying is like splitting a function that takes multiple arguments into a chain of functions, each handling one argument at a time**
