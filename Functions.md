@@ -182,3 +182,36 @@ callFunction(greet); // Output: Hello!
 - Return functions from other functions.
 ## Why First-Class Functions are Useful:
 They make JavaScript flexible and powerful, allowing techniques like callbacks, higher-order functions, and functional programming. 
+
+# Pure vs Impure Functions in JavaScript
+
+| **Aspect**             | **Pure Functions**                                                                 | **Impure Functions**                                                                |
+|------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| **Definition**          | A function that always returns the same output for the same input and has no side effects. | A function whose output can change for the same input or has side effects (e.g., modifying external data). |
+| **Characteristics**     | - No side effects (does not modify external state) <br> - Returns the same result for the same input | - May have side effects (modifies external state) <br> - Output may vary even for the same input |
+| **Example**             | ```js  function add(a, b) { return a + b; } ```                                   | ```js let count = 0; function increment() { count++; return count; } ```           |
+| **Output**              | - Always predictable output (e.g., `add(2, 3)` will always return `5`)             | - Output depends on external state (e.g., `increment()` will return a different result each time it is called) |
+| **Use Case**            | - Easier to test and debug <br> - Makes the code more predictable and reliable     | - Can be useful when you need to update external states like UI or server requests  |
+
+### Explanation:
+
+- **Pure Function Example:**
+  ```js
+  function add(a, b) {
+    return a + b;
+  }
+  ```
+Always returns the same output for the same input (add(2, 3) always returns 5).
+
+**Impure Function Example:**
+```
+let count = 0;
+function increment() {
+  count++;
+  return count;
+}
+```
+The output changes with every call because it modifies the external variable count.
+### Conclusion:
+- Pure functions are predictable and have no side effects.
+- Impure functions may modify external state and produce different results for the same input.
