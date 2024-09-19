@@ -108,3 +108,23 @@ add(5, 3);
 | **Purpose**    | Act as placeholders for the values the function will receive | Provide the actual data the function will use  |
 | **Declared**   | In the function definition                          | When the function is called                    |
 | **Example**    | `function add(a, b) {}` (`a` and `b` are parameters) | `add(5, 3)` (`5` and `3` are arguments)        |
+
+# Default Parameters in JavaScript
+
+- **Default Parameters** allow you to set default values for function parameters. 
+- If no argument is passed when the function is called, the default value is used instead.
+
+### Example:
+
+```js
+function greet(name = "Guest") {
+  console.log(`Hello, ${name}!`);
+}
+
+greet(); // Output: Hello, Guest!
+greet("Sumati"); // Output: Hello, Sumati!
+```
+In the example above:
+
+- If no value is passed for name, it defaults to "Guest".
+- If a value is provided, like "Sumati", that value is used instead of the default.
