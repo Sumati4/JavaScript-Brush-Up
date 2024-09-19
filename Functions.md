@@ -215,3 +215,30 @@ The output changes with every call because it modifies the external variable cou
 ### Conclusion:
 - Pure functions are predictable and have no side effects.
 - Impure functions may modify external state and produce different results for the same input.
+
+# Function Currying in JavaScript
+
+- **Currying** is a technique in JavaScript where a function is transformed into a series of functions, each taking a single argument.
+- Instead of taking all arguments at once, a curried function takes them one at a time.
+
+### Example:
+
+```js
+function add(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+const addTwo = add(2); // The first argument is '2'
+console.log(addTwo(3)); // Output: 5
+```
+**In this example:**
+-The add function is curried.
+-First, add(2) is called, returning a new function.
+-Then, addTwo(3) is called, which completes the addition (2 + 3 = 5).
+## Why Use Currying?
+-It allows you to break down a function into smaller, more manageable parts.
+-It’s useful when you want to reuse a function with some preset values (partial application).
+
+**Currying is like splitting a function that takes multiple arguments into a chain of functions, each handling one argument at a time**
