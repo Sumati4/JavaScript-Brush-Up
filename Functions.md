@@ -242,3 +242,60 @@ console.log(addTwo(3)); // Output: 5
 - It’s useful when you want to reuse a function with some preset values (partial application).
 
 **Currying is like splitting a function that takes multiple arguments into a chain of functions, each handling one argument at a time**
+
+# `call()`, `apply()`, and `bind()` Methods in JavaScript
+
+These methods are used to control the context (`this`) of functions in JavaScript.
+
+## 1. `call()`
+
+- **Purpose**: Invokes a function with a given `this` value and individual arguments.
+- **Syntax**: `functionName.call(thisValue, arg1, arg2, ...)`
+
+### Example:
+
+```js
+function greet(greeting, name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+greet.call(null, "Hello", "Sumati"); // Output: Hello, Sumati!
+```
+**In this example:**
+- call() invokes the greet function.
+- null sets the this value (not used in this example).
+- "Hello" and "Sumati" are the arguments passed to greet.
+## 2. apply()
+- **Purpose:** Invokes a function with a given this value and arguments provided as an array.
+- **Syntax:** functionName.apply(thisValue, [arg1, arg2, ...])
+### Example:
+```
+function greet(greeting, name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+greet.apply(null, ["Hello", "Sumati"]); // Output: Hello, Sumati!
+```
+**In this example:**
+- apply() invokes the greet function.
+- null sets the this value (not used in this example).
+- ["Hello", "Sumati"] is an array of arguments passed to greet.
+## 3. bind()
+**Purpose:** Creates a new function with a given this value and initial arguments, which can be called later.
+**Syntax:** const newFunction = functionName.bind(thisValue, arg1, arg2, ...)
+### Example:
+```
+function greet(greeting, name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+const greetHello = greet.bind(null, "Hello");
+greetHello("Sumati"); // Output: Hello, Sumati!
+```
+**In this example:**
+- bind() creates a new function greetHello with this value null and "Hello" as the preset argument.
+- greetHello("Sumati") calls the new function with "Sumati" as the second argument.
+### Summary
+- **call():** Calls a function immediately with specified this and arguments.
+- **apply():** Calls a function immediately with specified this and an array of arguments.
+- **bind():** Creates a new function with a specified this and initial arguments, to be called later.
