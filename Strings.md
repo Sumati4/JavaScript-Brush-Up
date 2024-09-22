@@ -99,3 +99,50 @@ The template literal automatically handles the new line without needing .
 ### Summary
 - **Template Literals:** Make string writing simpler and support multi-line strings.
 - **String Interpolation:** Makes it easy to insert variables and expressions inside strings using ${} inside template literals.
+
+# Single Quotes vs Double Quotes vs Backticks in JavaScript
+
+In JavaScript, strings can be created using **single quotes (`'`)**, **double quotes (`"`)**, or **backticks (` `` `)**. Each has its use case and features. Here's a comparison:
+
+| **Feature**              | **Single Quotes `' '`**                                   | **Double Quotes `" "`**                                    | **Backticks `` ` ` ``**                                    |
+|--------------------------|-----------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------|
+| **Basic Usage**           | Used for creating simple strings                          | Similar to single quotes for simple strings                 | Used for template literals and multi-line strings            |
+| **Variable Interpolation**| Not supported, must concatenate variables using `+`       | Not supported, must concatenate variables using `+`          | Supports string interpolation with `${}`                    |
+| **Multi-line Strings**    | Not supported, need to use `\n` for new lines             | Not supported, need to use `\n` for new lines               | Supports multi-line strings without special characters       |
+| **Escape Characters**     | Use `\'` to escape single quotes inside the string        | Use `\"` to escape double quotes inside the string          | Backticks rarely need escaping, but `\`` can escape a backtick |
+| **Preferred Use Case**    | When consistency is needed, e.g., JSON                    | When consistency is needed, e.g., JSON                      | When you need interpolation or multi-line strings            |
+
+---
+
+### Examples
+
+1. **Single Quotes**:
+
+```javascript
+let singleQuoteStr = 'This is a string';
+let name = 'Sumati';
+let message = 'Hello, ' + name + '!';  // Concatenation required
+console.log(message);
+```
+2.**Double Quotes:**
+```
+let doubleQuoteStr = "This is also a string";
+let name = "Sumati";
+let message = "Hello, " + name + "!";  // Concatenation required
+console.log(message);
+```
+3.**Backticks (Template Literals):**
+```
+let backtickStr = `This is a string with backticks`;
+let name = "Sumati";
+let message = `Hello, ${name}! Welcome to JavaScript.`;  // String interpolation
+console.log(message);
+```
+### Summary
+
+- **Single Quotes (`' '`) and Double Quotes (`" "`):** 
+  Both are similar, and the choice between them often comes down to **preference** or **consistency**. Neither supports string interpolation or multi-line strings without escape characters.
+
+- **Backticks (Template Literals `` ` ` ``):** 
+  Offer more flexibility with **string interpolation** and **multi-line strings**, making them ideal for **dynamic content** or when working with complex strings.
+
