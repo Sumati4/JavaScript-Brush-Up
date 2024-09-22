@@ -46,3 +46,56 @@ console.log(str.substring(0, 5)); // Output: "Hello"
 ```
 ## Conclusion:
 Strings in JavaScript are used to work with text. You can perform various operations on strings using different methods like changing case, extracting characters, and more!
+
+# Template Literals vs String Interpolation in JavaScript
+
+In JavaScript, **template literals** and **string interpolation** are closely related. Template literals allow us to embed expressions directly inside a string, which is what string interpolation is used for.
+
+Here's a simple comparison:
+
+| **Feature**                | **Template Literals**                                         | **String Interpolation** |
+|----------------------------|---------------------------------------------------------------|--------------------------|
+| **Definition**              | A way to create strings using backticks `` ` ` ``             | Inserting variables or expressions into strings |
+| **Syntax**                  | Uses backticks `` ` ` `` instead of quotes `" "` or `' '`     | Use `${expression}` inside template literals |
+| **Multi-line Support**      | Allows writing multi-line strings easily                     | Part of template literals, lets you insert dynamic content inside strings |
+| **Variable Insertion**      | Supports inserting variables directly inside the string       | Achieved by wrapping expressions inside `${}` |
+| **Expression Support**      | Can include JavaScript expressions directly inside a string   | Part of template literals, can evaluate expressions in `${}` |
+| **Use Case**                | To create complex, multi-line, or dynamic strings easily      | To dynamically insert variables/expressions in a string |
+
+### Example
+
+1. **Without Template Literals or String Interpolation:**
+
+```javascript
+let name = "Sumati";
+let greeting = "Hello, " + name + "! Welcome to JavaScript.";
+console.log(greeting);
+```
+Here, you have to concatenate (join) strings with +, which can be messy.
+
+2.**With Template Literals and String Interpolation:**
+```
+let name = "Sumati";
+let greeting = `Hello, ${name}! Welcome to JavaScript.`;
+console.log(greeting);
+```
+In this version, using template literals (backticks `) makes it much cleaner and easier to interpolate the variable name.
+
+**Multi-line String Example:**
+Without Template Literals:
+```
+let message = "This is line 1.\n" + 
+              "This is line 2.";
+console.log(message);
+```
+**With Template Literals (Multi-line Support):**
+```
+let message = `This is line 1.
+This is line 2.`;
+console.log(message);
+```
+The template literal automatically handles the new line without needing .
+
+### Summary
+Template Literals: Make string writing simpler and support multi-line strings.
+String Interpolation: Makes it easy to insert variables and expressions inside strings using ${} inside template literals.
