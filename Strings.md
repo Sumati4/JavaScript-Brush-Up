@@ -97,5 +97,5 @@ console.log(message);
 The template literal automatically handles the new line without needing .
 
 ### Summary
-Template Literals: Make string writing simpler and support multi-line strings.
-String Interpolation: Makes it easy to insert variables and expressions inside strings using ${} inside template literals.
+- **Template Literals:** Make string writing simpler and support multi-line strings.
+-**String Interpolation:** Makes it easy to insert variables and expressions inside strings using ${} inside template literals.
