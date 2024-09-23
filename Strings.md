@@ -303,4 +303,62 @@ let result = str.match(datePattern);
 console.log(result);  
 // Output: ['2024-09-10', '2024', '09', '10']
 ```
+# String Immutability in JavaScript
 
+## What Does "Immutability" Mean?
+
+In simple terms, **immutability** means that once something is created, it cannot be changed directly.
+
+When we say **strings are immutable in JavaScript**, it means that once a string is created, its value cannot be changed or modified. However, you can create a new string based on changes, but the original string remains the same.
+
+## Example of String Immutability
+
+Let's look at an example to understand this better:
+
+```js
+let text = "Hello";
+
+// Trying to change the first character of the string
+text[0] = "J";
+
+console.log(text); // Output: "Hello"
+```
+In the above code, we tried to change the first character of the string "Hello" to "J", but it didn't work. That's because strings in JavaScript are immutable. The string "Hello" remains unchanged.
+
+# Modifying a String (Creating a New One)
+
+To "modify" a string in JavaScript, we need to create a **new string** based on the desired changes. Here's an example of how you can do that:
+
+```js
+let text = "Hello";
+
+// Creating a new string by replacing "H" with "J"
+let newText = "J" + text.slice(1);
+
+console.log(newText); // Output: "Jello"
+```
+In this example, instead of modifying the original string, we created a new string "Jello" by concatenating "J" with the rest of the string "ello".
+# Why Are Strings Immutable?
+
+Strings are immutable in JavaScript for several reasons:
+
+### 1. Memory Efficiency
+If multiple variables reference the same string, changing it in one place shouldn't affect the others. This saves memory by avoiding unnecessary duplication of data.
+
+### 2. Security
+Immutability prevents accidental or malicious changes to important data, ensuring the integrity of your strings throughout the program. Once a string is created, its content can't be altered directly.
+
+### 3. Performance
+Immutable strings can be optimized more effectively by JavaScript engines. Since the string doesn't change, the engine can reuse the same memory space, which leads to better performance in your applications.
+
+---
+
+## Key Points
+- **Strings cannot be changed once created**. Trying to modify a string directly will not work.
+  
+- You can always create a **new string** based on the original string with the desired changes.
+  
+- **Immutability** helps make your code safer, more secure, and more efficient in terms of memory and performance.
+
+---
+**In summary, string immutability in JavaScript ensures memory efficiency, enhances security, and improves performance by making strings unchangeable after they are created.**
