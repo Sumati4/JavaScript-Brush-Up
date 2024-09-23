@@ -146,3 +146,161 @@ console.log(message);
 - **Backticks (Template Literals `` ` ` ``):** 
   Offer more flexibility with **string interpolation** and **multi-line strings**, making them ideal for **dynamic content** or when working with complex strings.
 
+  # Important String Operations in JavaScript
+
+This document highlights some of the most commonly used string operations in JavaScript, with examples to demonstrate their usage.
+
+## 1. `length`
+The `length` property returns the length of a string.
+
+```
+let str = "Hello, World!";
+console.log(str.length);  // Output: 13
+```
+
+
+
+## 2. charAt()
+The charAt() method returns the character at a specified index (position) in a string.
+
+```
+let str = "Hello";
+console.log(str.charAt(1));  // Output: e
+```
+## 3. indexOf()
+The indexOf() method returns the index of the first occurrence of a specified value in a string. If the value is not found, it returns -1.
+```
+let str = "Hello, World!";
+console.log(str.indexOf("World"));  // Output: 7
+console.log(str.indexOf("JavaScript"));  // Output: -1
+```
+## 4. includes()
+The includes() method checks whether a string contains a specified substring. It returns true or false.
+```
+let str = "Hello, World!";
+console.log(str.includes("World"));  // Output: true
+console.log(str.includes("JavaScript"));  // Output: false
+```
+## 5. substring()
+The substring() method extracts a part of a string and returns it as a new string. You can specify the start and end indices.
+```
+let str = "Hello, World!";
+console.log(str.substring(0, 5));  // Output: Hello
+```
+## 6. slice()
+The slice() method extracts a section of a string and returns it as a new string, similar to substring(), but it can also accept negative indices.
+```
+let str = "Hello, World!";
+console.log(str.slice(7));  // Output: World!
+console.log(str.slice(-6));  // Output: World!
+```
+## 7. toUpperCase() and toLowerCase()
+These methods convert the string to uppercase or lowercase, respectively.
+```
+let str = "Hello, World!";
+console.log(str.toUpperCase());  // Output: HELLO, WORLD!
+console.log(str.toLowerCase());  // Output: hello, world!
+```
+## 8. replace()
+The replace() method replaces the first occurrence of a specified value with another value. To replace all occurrences, use a regular expression with the global flag (/g).
+```
+let str = "Hello, World!";
+console.log(str.replace("World", "JavaScript"));  // Output: Hello, JavaScript!
+console.log(str.replace(/o/g, "0"));  // Output: Hell0, W0rld!
+```
+## 9. split()
+The split() method splits a string into an array of substrings based on a specified delimiter.
+```
+let str = "Hello, World!";
+let arr = str.split(", ");
+console.log(arr);  // Output: ['Hello', 'World!']
+```
+
+## 10. trim()
+The trim() method removes whitespace from both ends of a string.
+```
+let str = "   Hello, World!   ";
+console.log(str.trim());  // Output: "Hello, World!"
+```
+## 11. concat()
+The concat() method concatenates (joins) two or more strings.
+```
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(", ", str2, "!"));  // Output: Hello, World!
+```
+## 12. startsWith() and endsWith()
+The startsWith() method checks if a string starts with a specified substring, and endsWith() checks if it ends with a specified substring.
+```
+let str = "Hello, World!";
+console.log(str.startsWith("Hello"));  // Output: true
+console.log(str.endsWith("!"));  // Output: true
+```
+## 13. repeat()
+The repeat() method repeats a string a specified number of times.
+
+```
+let str = "Hello ";
+console.log(str.repeat(3));  // Output: Hello Hello Hello
+```
+## 14. `substr()`
+The `substr()` method extracts a part of a string, starting at a specified index and extending for a given number of characters. Unlike `substring()`, you specify the start index and the length of the substring.
+
+```javascript
+let str = "Hello, World!";
+console.log(str.substr(7, 5));  // Output: World
+```
+Note: substr() is considered a legacy function, and it is recommended to use slice() or substring() instead for modern code.
+## 15. search()
+The search() method searches a string for a specified value or regular expression and returns the position of the match. If no match is found, it returns -1.
+```
+let str = "Hello, World!";
+console.log(str.search("World"));  // Output: 7
+console.log(str.search("JavaScript"));  // Output: -1
+```
+## 16. `lastIndexOf()`
+The `lastIndexOf()` method returns the index of the last occurrence of a specified value in a string. It searches from the end of the string towards the beginning. If the value is not found, it returns `-1`.
+
+```javascript
+let str = "Hello, World, Hello!";
+console.log(str.lastIndexOf("Hello"));  // Output: 13
+console.log(str.lastIndexOf("World"));  // Output: 7
+```
+## 17. charCodeAt()
+The charCodeAt() method returns the Unicode of the character at a specified index in a string. The returned value is an integer representing the UTF-16 code unit.
+```
+let str = "Hello";
+console.log(str.charCodeAt(0));  // Output: 72 (Unicode for 'H')
+```
+## 18. valueOf()
+The valueOf() method returns the primitive value of a String object. In most cases, this method is called automatically when string operations are applied, so it's rarely used explicitly.
+
+```
+let str = new String("Hello");
+console.log(str.valueOf());  // Output: Hello
+```
+## 19. toString()
+The toString() method returns a string representing the specified object. It's similar to valueOf(), but can be explicitly called on various data types (e.g., numbers, arrays) to return their string representation.
+
+```
+let num = 123;
+console.log(num.toString());  // Output: "123"
+```
+## 20. match()
+The match() method retrieves the result of matching a string against a regular expression. It returns an array of matches, or null if no match is found.
+
+```
+let str = "The rain in Spain stays mainly in the plain";
+let result = str.match(/ain/g);
+console.log(result);  // Output: ['ain', 'ain', 'ain']
+```
+You can also use it with capturing groups:
+
+```
+let str = "2024-09-10";
+let datePattern = /(\d{4})-(\d{2})-(\d{2})/;
+let result = str.match(datePattern);
+console.log(result);  
+// Output: ['2024-09-10', '2024', '09', '10']
+```
+
