@@ -421,8 +421,8 @@ console.log(str); // Output: "Hello World"
 Explanation:
 The += operator appends the second string to the first string and updates the original string.
 ## Summary of Methods:
-**+ Operator:** Simple and direct.
-**concat() Method:** Joins strings using a method call.
-**Template Literals:** Best for embedding variables and expressions.
-**join() Method:** Useful when dealing with arrays of strings.
-+= Operator: Adds one string to another in place.
+- **+ Operator:** Simple and direct.
+- **concat() Method:** Joins strings using a method call.
+- **Template Literals:** Best for embedding variables and expressions.
+- **join() Method:** Useful when dealing with arrays of strings.
+- += Operator: Adds one string to another in place.
